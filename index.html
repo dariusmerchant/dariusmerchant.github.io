@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>William Price | Roblox Developer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    background:#1a1a1a;
+    padding:25px;
+    text-align:center;
+    border-bottom:2px solid #333;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    color:#aaa;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:#151515;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#00bfff;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:2.5rem;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00bfff;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#222;
+    padding:10px 15px;
+    border-radius:20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#1a1a1a;
+    margin-top:50px;
+    border-top:2px solid #333;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00bfff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.contact-btn:hover{
+    opacity:0.85;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>William Price</h1>
+    <p>Up-and-Coming Roblox Scripter & Game Developer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#goals">Goals</a>
+</nav>
+
+<section class="hero">
+    <h2>Building Engaging Roblox Experiences</h2>
+    <p>
+        I specialize in Roblox game systems, progression mechanics,
+        PvP gameplay, incremental systems, UI development,
+        and scalable scripting architecture.
+    </p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm a Roblox developer focused on creating progression-driven
+        experiences that are easy to learn but difficult to master.
+        I enjoy building systems involving growth mechanics,
+        combat, rebirth systems, unlockable content,
+        leaderboards, and player progression.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🗿 Giant Incremental</h3>
+            <p>
+                Grow larger by clicking, rebirth for multipliers,
+                unlock elemental weapons, fight in PvP arenas,
+                earn kills, unlock gear, and climb the leaderboards.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏃 Velocity Runner</h3>
+            <p>
+                A speed-based progression game where players
+                gain momentum and unlock increasingly powerful
+                movement abilities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💪 Infinite Weight Gym</h3>
+            <p>
+                Lift increasingly heavier objects to grow stronger,
+                unlock new worlds, and progress through a
+                large-scale strength system.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚔️ Martial Rank Incremental</h3>
+            <p>
+                Train, fight, and advance through martial arts
+                ranks while unlocking new combat abilities and
+                progression paths.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌎 Dimension Unlocker</h3>
+            <p>
+                Travel through multiple worlds, unlock new
+                dimensions, and gain increasingly powerful
+                upgrades and progression bonuses.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔬 Research Lab Incremental</h3>
+            <p>
+                Build a futuristic research empire by unlocking
+                advanced technologies and automating growth.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+        <div class="skill">Lua</div>
+        <div class="skill">Roblox Studio</div>
+        <div class="skill">RemoteEvents</div>
+        <div class="skill">DataStores</div>
+        <div class="skill">UI Development</div>
+        <div class="skill">Combat Systems</div>
+        <div class="skill">Incremental Systems</div>
+        <div class="skill">Leaderboards</div>
+        <div class="skill">Game Balancing</div>
+        <div class="skill">OOP</div>
+    </div>
+</section>
+
+<section id="goals">
+    <h2>Developer Goals</h2>
+
+    <p>
+        My goal is to become a professional Roblox gameplay programmer,
+        building polished systems that keep players engaged through
+        progression, competition, and rewarding gameplay loops.
+    </p>
+
+    <p style="margin-top:15px;">
+        I am actively developing new projects and expanding my
+        knowledge of scalable Roblox architecture, optimization,
+        multiplayer systems, and monetization design.
+    </p>
+
+    <a href="https://github.com/" class="contact-btn">
+        View My GitHub
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 William Price | Roblox Developer Portfolio</p>
+</footer>
+
+</body>
+</html>
