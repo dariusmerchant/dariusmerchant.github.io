@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="dylangamerX34 — Up & Coming Roblox Scripter. Boss fights, multiplayer games, simulators. Available for commissions.">
   <title>dylangamerX34 — Roblox Scripter</title>
-
+ 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+ 
 <style>
 /* ============================================================
    TOKENS & RESET
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 :root {
   --bg:         #06060e;
   --bg2:        #0a0a16;
@@ -39,7 +39,7 @@
   --font-b:     'Outfit',       sans-serif;
   --font-m:     'JetBrains Mono', monospace;
 }
-
+ 
 html   { scroll-behavior: smooth; }
 body   {
   background: var(--bg);
@@ -50,12 +50,12 @@ body   {
   overflow-x: hidden;
 }
 ::selection { background: var(--blue); color: #fff; }
-
+ 
 /* scrollbar */
 ::-webkit-scrollbar       { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
-
+ 
 /* ============================================================
    SCROLL PROGRESS BAR
    ============================================================ */
@@ -66,7 +66,7 @@ body   {
   box-shadow: 0 0 10px var(--blue);
   transition: width .1s linear;
 }
-
+ 
 /* ============================================================
    NAV
    ============================================================ */
@@ -83,7 +83,7 @@ nav.glass {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-
+ 
 .nav-logo {
   font-family: var(--font-d);
   font-size: 13px; font-weight: 700;
@@ -91,7 +91,7 @@ nav.glass {
   letter-spacing: .12em;
 }
 .nav-logo em { color: var(--blue); font-style: normal; }
-
+ 
 .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
 .nav-links a {
   color: var(--dim); text-decoration: none;
@@ -108,7 +108,7 @@ nav.glass {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--blue); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-
+ 
 .nav-cta {
   border: 1px solid var(--blue) !important;
   color: var(--blue) !important;
@@ -118,7 +118,7 @@ nav.glass {
 }
 .nav-cta:hover { background: var(--blue) !important; color: #fff !important; }
 .nav-cta::after { display: none !important; }
-
+ 
 /* ============================================================
    HERO
    ============================================================ */
@@ -127,7 +127,7 @@ nav.glass {
   display: flex; align-items: center; padding: 0 6% 0 8%;
   overflow: hidden;
 }
-
+ 
 /* grid */
 #hero::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
@@ -136,15 +136,15 @@ nav.glass {
     linear-gradient(90deg, rgba(77,139,255,.035) 1px, transparent 1px);
   background-size: 64px 64px;
 }
-
+ 
 /* vignette */
 #hero::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(ellipse at 30% 50%, transparent 35%, var(--bg) 85%);
 }
-
+ 
 #hero-canvas { position: absolute; inset: 0; opacity: .45; }
-
+ 
 /* floating code block — right side decoration */
 .hero-code {
   position: absolute; right: 7%; top: 50%; transform: translateY(-50%);
@@ -163,7 +163,7 @@ nav.glass {
   display: none; /* shown via media query */
 }
 @media (min-width: 1100px) { .hero-code { display: block; } }
-
+ 
 .hero-code .cm { color: #4a5272; }
 .hero-code .kw { color: var(--blue-lt); }
 .hero-code .fn { color: #a5c8ff; }
@@ -174,17 +174,17 @@ nav.glass {
   margin-bottom: 12px; padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
-
+ 
 @keyframes floatY {
   0%,100% { transform: translateY(-50%) translateY(0); }
   50%      { transform: translateY(-50%) translateY(-10px); }
 }
-
+ 
 .hero-inner {
   position: relative; z-index: 2;
   max-width: 680px;
 }
-
+ 
 .available-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--blue-glow); border: 1px solid var(--border2);
@@ -200,7 +200,7 @@ nav.glass {
   box-shadow: 0 0 6px var(--green);
   animation: blink 2s infinite;
 }
-
+ 
 .hero-name {
   font-family: var(--font-d);
   font-size: clamp(40px, 7vw, 84px);
@@ -209,7 +209,7 @@ nav.glass {
   animation: fadeUp .8s .1s ease both;
 }
 .hero-name .blue { color: var(--blue); text-shadow: 0 0 40px var(--blue-glow2); }
-
+ 
 .hero-role {
   margin-top: 8px;
   font-family: var(--font-m); font-size: 13px;
@@ -217,7 +217,7 @@ nav.glass {
   text-transform: uppercase;
   animation: fadeUp .8s .15s ease both;
 }
-
+ 
 .hero-sub {
   margin-top: 22px;
   font-size: clamp(17px, 2vw, 22px);
@@ -226,7 +226,7 @@ nav.glass {
   animation: fadeUp .8s .2s ease both;
 }
 .cursor { color: var(--blue); animation: blink .8s infinite; }
-
+ 
 .hero-stats {
   display: flex; gap: 36px;
   margin-top: 44px;
@@ -243,7 +243,7 @@ nav.glass {
   color: var(--muted); letter-spacing: .14em; text-transform: uppercase;
   margin-top: 3px;
 }
-
+ 
 .hero-btns {
   display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap;
   animation: fadeUp .8s .4s ease both;
@@ -270,7 +270,7 @@ nav.glass {
   transition: border-color .2s, color .2s, transform .15s;
 }
 .btn-s:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
-
+ 
 /* ============================================================
    KEYFRAMES
    ============================================================ */
@@ -279,7 +279,7 @@ nav.glass {
   to   { opacity:1; transform:translateY(0); }
 }
 @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
-
+ 
 /* ============================================================
    REVEAL ON SCROLL
    ============================================================ */
@@ -288,12 +288,12 @@ nav.glass {
   transition: opacity .65s ease, transform .65s ease;
 }
 .reveal.in { opacity:1; transform:translateY(0); }
-
+ 
 /* ============================================================
    SECTION COMMONS
    ============================================================ */
 section { padding: 96px 8%; }
-
+ 
 .sec-label {
   font-family: var(--font-m); font-size: 10px;
   color: var(--blue); letter-spacing: .22em;
@@ -306,7 +306,7 @@ section { padding: 96px 8%; }
   margin-bottom: 52px;
 }
 .sec-title .bl { color: var(--blue); }
-
+ 
 /* ============================================================
    FILTER BAR
    ============================================================ */
@@ -324,12 +324,12 @@ section { padding: 96px 8%; }
 .fpill:hover, .fpill.on {
   background: var(--blue-glow); border-color: var(--blue); color: var(--blue-lt);
 }
-
+ 
 /* ============================================================
    PROJECT CARDS
    ============================================================ */
 .projects-list { display: flex; flex-direction: column; gap: 28px; }
-
+ 
 .pcard {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius2); padding: 40px;
@@ -346,7 +346,7 @@ section { padding: 96px 8%; }
 .pcard:hover::before { opacity:1; }
 .pcard.dim { opacity: .28; }
 .pcard.lit { border-color: var(--blue); box-shadow: 0 0 24px var(--blue-glow2); }
-
+ 
 .pcard-top {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 16px; flex-wrap: wrap; gap: 10px;
@@ -357,7 +357,7 @@ section { padding: 96px 8%; }
   background: var(--blue-glow); border: 1px solid var(--border2);
   padding: 3px 10px; border-radius: 4px; letter-spacing: .1em; text-transform: uppercase;
 }
-
+ 
 .ptitle {
   font-family: var(--font-h); font-size: clamp(26px, 3vw, 38px);
   font-weight: 700; letter-spacing: .03em; line-height: 1.1;
@@ -367,7 +367,7 @@ section { padding: 96px 8%; }
   color: var(--dim); font-size: 14.5px; line-height: 1.8;
   max-width: 820px; margin-bottom: 22px;
 }
-
+ 
 /* tags row */
 .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 28px; }
 .tag {
@@ -379,13 +379,13 @@ section { padding: 96px 8%; }
 .tag:hover, .tag.hl {
   color: var(--blue-lt); border-color: var(--blue); background: var(--blue-glow);
 }
-
+ 
 /* 2-col layout inside card */
 .pcard-body {
   display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
 }
 @media (max-width: 820px) { .pcard-body { grid-template-columns: 1fr; } }
-
+ 
 /* video container */
 .vid-wrap {
   position: relative; width: 100%; aspect-ratio: 16/9;
@@ -415,7 +415,7 @@ section { padding: 96px 8%; }
 }
 .vid-name { font-family: var(--font-m); font-size: 11px; color: var(--muted); }
 .vid-hint { font-size: 10px; color: var(--muted); opacity: .5; }
-
+ 
 /* mechanics list */
 .mlist {
   background: var(--bg2); border: 1px solid var(--border);
@@ -428,18 +428,18 @@ section { padding: 96px 8%; }
 .mlist ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .mlist li { font-size: 13px; color: var(--dim); }
 .mlist li::before { content: '→ '; color: var(--blue); font-family: var(--font-m); }
-
+ 
 /* col header label */
 .col-label {
   font-family: var(--font-m); font-size: 10px; color: var(--muted);
   letter-spacing: .14em; text-transform: uppercase; margin-bottom: 10px;
 }
-
+ 
 /* ============================================================
    SKILLS SECTION
    ============================================================ */
 #skills { background: var(--bg2); }
-
+ 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -466,23 +466,23 @@ section { padding: 96px 8%; }
   margin-bottom: 8px; letter-spacing: .04em;
 }
 .sk-desc { font-size: 13px; color: var(--dim); line-height: 1.6; }
-
+ 
 /* ============================================================
    CONTACT SECTION
    ============================================================ */
 #contact { background: var(--bg); }
-
+ 
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start;
 }
 @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
-
+ 
 .contact-left h3 {
   font-family: var(--font-h); font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 700; line-height: 1.2; margin-bottom: 14px;
 }
 .contact-left p { color: var(--dim); font-size: 15px; margin-bottom: 34px; }
-
+ 
 .clinks { display: flex; flex-direction: column; gap: 12px; }
 .clink {
   display: flex; align-items: center; justify-content: space-between;
@@ -500,7 +500,7 @@ section { padding: 96px 8%; }
 .clink-name { font-size: 15px; font-weight: 500; color: var(--text); }
 .clink-arrow { color: var(--muted); font-size: 13px; transition: transform .2s, color .2s; }
 .clink:hover .clink-arrow { transform: translateX(4px); color: var(--blue); }
-
+ 
 .contact-rules {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius2); padding: 26px 28px;
@@ -516,7 +516,7 @@ section { padding: 96px 8%; }
 }
 .crule:last-child { border-bottom: none; }
 .crule-n { font-family: var(--font-m); font-size: 10px; color: var(--muted); min-width: 20px; padding-top: 2px; }
-
+ 
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -527,7 +527,7 @@ footer {
   font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 10px;
 }
 footer span { color: var(--dim); }
-
+ 
 /* ============================================================
    TOAST
    ============================================================ */
@@ -540,7 +540,7 @@ footer span { color: var(--dim); }
   transition: all .3s; pointer-events: none;
 }
 #toast.show { opacity: 1; transform: translateY(0); }
-
+ 
 /* ============================================================
    MOBILE NAV MENU
    ============================================================ */
@@ -564,10 +564,10 @@ footer span { color: var(--dim); }
 </style>
 </head>
 <body>
-
+ 
 <!-- Scroll Progress -->
 <div id="progress"></div>
-
+ 
 <!-- ============================================================
      NAV
      ============================================================ -->
@@ -582,13 +582,13 @@ footer span { color: var(--dim); }
     <span></span><span></span><span></span>
   </button>
 </nav>
-
+ 
 <!-- ============================================================
      HERO
      ============================================================ -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
-
+ 
   <!-- decorative floating code block -->
   <div class="hero-code">
     <div class="top">// DragonAI.lua</div>
@@ -603,13 +603,13 @@ footer span { color: var(--dim); }
     &nbsp;&nbsp;task.<span class="fn">wait</span>(<span class="str">3.5</span>)<br>
     <span class="kw">end</span>
   </div>
-
+ 
   <div class="hero-inner">
     <div class="available-badge">Available for Commissions</div>
     <h1 class="hero-name">DJR<br><span class="blue">8872</span></h1>
     <p class="hero-role">// Roblox Studio Scripter</p>
     <p class="hero-sub" id="typed"></p>
-
+ 
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-n" data-count="3">0</div>
@@ -624,14 +624,14 @@ footer span { color: var(--dim); }
         <div class="stat-l">For Work</div>
       </div>
     </div>
-
+ 
     <div class="hero-btns">
       <a href="#projects" class="btn-p">View My Work ↓</a>
       <a href="#contact"  class="btn-s">Hire Me →</a>
     </div>
   </div>
 </section>
-
+ 
 <!-- ============================================================
      PROJECTS
      ============================================================ -->
@@ -640,7 +640,7 @@ footer span { color: var(--dim); }
     <div class="sec-label">// 01 — work</div>
     <h2 class="sec-title">Portfolio <span class="bl">Projects</span></h2>
   </div>
-
+ 
   <!-- Filter bar: clicking a pill OR a tag on a card cross-filters -->
   <div class="filter-row reveal">
     <button class="fpill on" data-f="all">All</button>
@@ -651,128 +651,15 @@ footer span { color: var(--dim); }
     <button class="fpill" data-f="ui">UI / HUD</button>
     <button class="fpill" data-f="simulator">Simulator</button>
   </div>
-
+ 
   <div class="projects-list">
-
+ 
     <!-- ────────────────────────────────
-         PROJECT 01 — DRAGON BOSS FIGHT
-         ──────────────────────────────── -->
-    <div class="pcard reveal" data-tags="combat ai ui multiplayer">
-      <div class="pcard-top">
-        <span class="pnum">01 —</span>
-        <span class="pbadge">Boss Fight</span>
-      </div>
-      <h3 class="ptitle">Dragon Boss Fight</h3>
-      <p class="pdesc">
-        A fully scripted PvE boss fight where one player fights a 1000 HP dragon armed with a
-        sword and an air blast ability. Every mechanic is server-authoritative — fireball trajectories,
-        hit detection, and ability cooldowns run server-side. The dragon pursues, attacks, and
-        reacts via a custom AI loop, while a live HUD displays both HP bars and the ability timer.
-      </p>
-
-      <div class="tags">
-        <span class="tag" data-t="ai">NPC AI</span>
-        <span class="tag" data-t="combat">Server Combat</span>
-        <span class="tag" data-t="multiplayer">RemoteEvents</span>
-        <span class="tag" data-t="ui">Boss HP Bar</span>
-        <span class="tag" data-t="combat">Projectile Physics</span>
-        <span class="tag" data-t="ui">Ability Cooldown UI</span>
-        <span class="tag" data-t="ai">Aggro System</span>
-        <span class="tag" data-t="combat">Sphere Hit Detection</span>
-      </div>
-
-      <div class="pcard-body">
-        <div>
-          <p class="col-label">Gameplay Preview</p>
-          <!-- VIDEO: Replace div.vid-wrap with your iframe when ready -->
-          <div class="vid-wrap">
-  <iframe
-    src="https://www.youtube.com/embed/biTCs_WLAb0"
-    title="Dragon Boss Fight"
-    allowfullscreen>
-  </iframe>
-</div>
-        </div>
-        <div>
-          <p class="col-label">Mechanics Built</p>
-          <div class="mlist">
-            <div class="mlist-title">// feature breakdown</div>
-            <ul>
-              <li>Dragon aggro + pursuit AI loop</li>
-              <li>Fireball with dodgeable physics arc</li>
-              <li>Sword swing via sphere overlap</li>
-              <li>Q-key Air Blast ability (6s cooldown)</li>
-              <li>Server-authoritative damage system</li>
-              <li>Animated boss HP bar + player HP bar</li>
-              <li>Victory / defeat screen with tweens</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ────────────────────────────────
-         PROJECT 02 — STEAL A JOB
-         ──────────────────────────────── -->
-    <div class="pcard reveal" data-tags="multiplayer ui datastore">
-      <div class="pcard-top">
-        <span class="pnum">02 —</span>
-        <span class="pbadge">Multiplayer</span>
-      </div>
-      <h3 class="ptitle">Steal a Job</h3>
-      <p class="pdesc">
-        A fast-paced multiplayer game inspired by the "Steal a Brainrot" format — players compete
-        to steal jobs from each other in real time. Features proximity interaction detection,
-        server-validated job transfers, persistent progression via DataStore, a live leaderboard,
-        and per-player cooldown tracking. Everything is validated server-side to prevent exploits.
-      </p>
-
-      <div class="tags">
-        <span class="tag" data-t="multiplayer">Proximity Interaction</span>
-        <span class="tag" data-t="datastore">DataStore</span>
-        <span class="tag" data-t="ui">Leaderboard UI</span>
-        <span class="tag" data-t="multiplayer">Server Validation</span>
-        <span class="tag" data-t="multiplayer">Game Loop</span>
-        <span class="tag" data-t="ui">Job Status HUD</span>
-        <span class="tag" data-t="multiplayer">Cooldown System</span>
-      </div>
-
-      <div class="pcard-body">
-        <div>
-          <p class="col-label">Gameplay Preview</p>
-          <!-- VIDEO: Replace div.vid-wrap with your iframe when ready -->
-          <div class="vid-wrap">
-  <iframe
-    src="https://www.youtube.com/embed/wMLwxwk0ZkI"
-    title="Steal a Job"
-    allowfullscreen>
-  </iframe>
-</div>
-        </div>
-        <div>
-          <p class="col-label">Mechanics Built</p>
-          <div class="mlist">
-            <div class="mlist-title">// feature breakdown</div>
-            <ul>
-              <li>Proximity-based job stealing</li>
-              <li>Job assignment + transfer logic</li>
-              <li>DataStore persistent saves</li>
-              <li>Live job-holder leaderboard</li>
-              <li>Per-player steal cooldown</li>
-              <li>Anti-exploit server checks</li>
-              <li>Respawn job re-assignment</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ────────────────────────────────
-         PROJECT 03 — MOG SIMULATOR
+         PROJECT 01 — MOG SIMULATOR
          ──────────────────────────────── -->
     <div class="pcard reveal" data-tags="simulator datastore ui">
       <div class="pcard-top">
-        <span class="pnum">03 —</span>
+        <span class="pnum">01 —</span>
         <span class="pbadge">Simulator</span>
       </div>
       <h3 class="ptitle">Mog Simulator</h3>
@@ -783,7 +670,7 @@ footer span { color: var(--dim); }
         Legendary), a dual-prestige system (Rebirth + PSL Ascend), offline earnings, and full
         zone progression. The entire economy is DataStore-backed with safe auto-save on leave.
       </p>
-
+ 
       <div class="tags">
         <span class="tag" data-t="simulator">Economy Loop</span>
         <span class="tag" data-t="datastore">DataStore + Leaderstats</span>
@@ -794,11 +681,10 @@ footer span { color: var(--dim); }
         <span class="tag" data-t="simulator">Rarity Pickups</span>
         <span class="tag" data-t="datastore">Offline Gains</span>
       </div>
-
+ 
       <div class="pcard-body">
         <div>
           <p class="col-label">Gameplay Preview</p>
-          <!-- VIDEO: Replace div.vid-wrap with your iframe when ready -->
           <div class="vid-wrap">
   <iframe
     src="https://www.youtube.com/embed/4XDG4DuaI-M"
@@ -825,10 +711,121 @@ footer span { color: var(--dim); }
         </div>
       </div>
     </div>
-
+ 
+    <!-- ────────────────────────────────
+         PROJECT 02 — STEAL A JOB
+         ──────────────────────────────── -->
+    <div class="pcard reveal" data-tags="multiplayer ui datastore">
+      <div class="pcard-top">
+        <span class="pnum">02 —</span>
+        <span class="pbadge">Multiplayer</span>
+      </div>
+      <h3 class="ptitle">Steal a Job</h3>
+      <p class="pdesc">
+        A fast-paced multiplayer game inspired by the "Steal a Brainrot" format — players compete
+        to steal jobs from each other in real time. Features proximity interaction detection,
+        server-validated job transfers, persistent progression via DataStore, a live leaderboard,
+        and per-player cooldown tracking. Everything is validated server-side to prevent exploits.
+      </p>
+ 
+      <div class="tags">
+        <span class="tag" data-t="multiplayer">Proximity Interaction</span>
+        <span class="tag" data-t="datastore">DataStore</span>
+        <span class="tag" data-t="ui">Leaderboard UI</span>
+        <span class="tag" data-t="multiplayer">Server Validation</span>
+        <span class="tag" data-t="multiplayer">Game Loop</span>
+        <span class="tag" data-t="ui">Job Status HUD</span>
+        <span class="tag" data-t="multiplayer">Cooldown System</span>
+      </div>
+ 
+      <div class="pcard-body">
+        <div>
+          <p class="col-label">Gameplay Preview</p>
+          <div class="vid-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/wMLwxwk0ZkI"
+    title="Steal a Job"
+    allowfullscreen>
+  </iframe>
+</div>
+        </div>
+        <div>
+          <p class="col-label">Mechanics Built</p>
+          <div class="mlist">
+            <div class="mlist-title">// feature breakdown</div>
+            <ul>
+              <li>Proximity-based job stealing</li>
+              <li>Job assignment + transfer logic</li>
+              <li>DataStore persistent saves</li>
+              <li>Live job-holder leaderboard</li>
+              <li>Per-player steal cooldown</li>
+              <li>Anti-exploit server checks</li>
+              <li>Respawn job re-assignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ────────────────────────────────
+         PROJECT 03 — DRAGON BOSS FIGHT
+         ──────────────────────────────── -->
+    <div class="pcard reveal" data-tags="combat ai ui multiplayer">
+      <div class="pcard-top">
+        <span class="pnum">03 —</span>
+        <span class="pbadge">Boss Fight</span>
+      </div>
+      <h3 class="ptitle">Dragon Boss Fight</h3>
+      <p class="pdesc">
+        A fully scripted PvE boss fight where one player fights a 1000 HP dragon armed with a
+        sword and an air blast ability. Every mechanic is server-authoritative — fireball trajectories,
+        hit detection, and ability cooldowns run server-side. The dragon pursues, attacks, and
+        reacts via a custom AI loop, while a live HUD displays both HP bars and the ability timer.
+      </p>
+ 
+      <div class="tags">
+        <span class="tag" data-t="ai">NPC AI</span>
+        <span class="tag" data-t="combat">Server Combat</span>
+        <span class="tag" data-t="multiplayer">RemoteEvents</span>
+        <span class="tag" data-t="ui">Boss HP Bar</span>
+        <span class="tag" data-t="combat">Projectile Physics</span>
+        <span class="tag" data-t="ui">Ability Cooldown UI</span>
+        <span class="tag" data-t="ai">Aggro System</span>
+        <span class="tag" data-t="combat">Sphere Hit Detection</span>
+      </div>
+ 
+      <div class="pcard-body">
+        <div>
+          <p class="col-label">Gameplay Preview</p>
+          <div class="vid-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/biTCs_WLAb0"
+    title="Dragon Boss Fight"
+    allowfullscreen>
+  </iframe>
+</div>
+        </div>
+        <div>
+          <p class="col-label">Mechanics Built</p>
+          <div class="mlist">
+            <div class="mlist-title">// feature breakdown</div>
+            <ul>
+              <li>Dragon aggro + pursuit AI loop</li>
+              <li>Fireball with dodgeable physics arc</li>
+              <li>Sword swing via sphere overlap</li>
+              <li>Q-key Air Blast ability (6s cooldown)</li>
+              <li>Server-authoritative damage system</li>
+              <li>Animated boss HP bar + player HP bar</li>
+              <li>Victory / defeat screen with tweens</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
   </div><!-- /projects-list -->
 </section>
-
+ 
 <!-- ============================================================
      SKILLS
      ============================================================ -->
@@ -837,7 +834,7 @@ footer span { color: var(--dim); }
     <div class="sec-label">// 02 — capabilities</div>
     <h2 class="sec-title">What I <span class="bl">Build</span></h2>
   </div>
-
+ 
   <div class="skills-grid">
     <div class="skcard reveal">
       <div class="sk-ico">[AI]</div>
@@ -881,7 +878,7 @@ footer span { color: var(--dim); }
     </div>
   </div>
 </section>
-
+ 
 <!-- ============================================================
      CONTACT
      ============================================================ -->
@@ -890,13 +887,12 @@ footer span { color: var(--dim); }
     <div class="sec-label">// 03 — contact</div>
     <h2 class="sec-title">Work <span class="bl">Together</span></h2>
   </div>
-
+ 
   <div class="contact-grid">
     <div class="contact-left reveal">
       <h3>Let's build something that actually works.</h3>
       <p>Open for commissions and studio projects. I build clean, modular systems — not code that breaks on the next update. I respond fast.</p>
       <div class="clinks">
-        <!-- Discord: clicking copies username to clipboard -->
         <div class="clink" onclick="copyToClip('djr8872', 'Discord username copied!')">
           <div class="clink-left">
             <span class="clink-platform">Discord</span>
@@ -904,7 +900,6 @@ footer span { color: var(--dim); }
           </div>
           <span class="clink-arrow">Copy ↗</span>
         </div>
-        <!-- Roblox: update YOUR_ROBLOX_ID -->
         <a class="clink" href="https://www.roblox.com/users/533763415/profile" target="_blank" rel="noopener">
           <div class="clink-left">
             <span class="clink-platform">Roblox</span>
@@ -914,7 +909,7 @@ footer span { color: var(--dim); }
         </a>
       </div>
     </div>
-
+ 
     <div class="contact-rules reveal">
       <div class="crules-title">// Before you reach out</div>
       <div class="crule">
@@ -936,7 +931,7 @@ footer span { color: var(--dim); }
     </div>
   </div>
 </section>
-
+ 
 <!-- ============================================================
      FOOTER
      ============================================================ -->
@@ -944,11 +939,11 @@ footer span { color: var(--dim); }
   <span>© 2026 <span>dylangamerX34</span> — Roblox Scripter</span>
   <span style="font-family:var(--font-m); font-size:10px;">Built clean. Built to scale.</span>
 </footer>
-
+ 
 <!-- Toast notification -->
 <div id="toast"></div>
-
-
+ 
+ 
 <!-- ============================================================
      JAVASCRIPT
      ============================================================ -->
@@ -958,12 +953,12 @@ footer span { color: var(--dim); }
   const canvas = document.getElementById('hero-canvas');
   const ctx    = canvas.getContext('2d');
   let pts = [], W, H;
-
+ 
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
     H = canvas.height = canvas.offsetHeight;
   }
-
+ 
   function Pt() {
     this.x  = Math.random() * W;
     this.y  = Math.random() * H;
@@ -971,15 +966,15 @@ footer span { color: var(--dim); }
     this.vy = (Math.random() - .5) * .35;
     this.r  = Math.random() * 1.4 + .4;
   }
-
+ 
   Pt.prototype.tick = function () {
     this.x += this.vx; this.y += this.vy;
     if (this.x < 0 || this.x > W) this.vx *= -1;
     if (this.y < 0 || this.y > H) this.vy *= -1;
   };
-
+ 
   function build() { resize(); pts = []; const n = Math.floor(W * H / 12000); for (let i = 0; i < n; i++) pts.push(new Pt()); }
-
+ 
   function frame() {
     ctx.clearRect(0, 0, W, H);
     pts.forEach(p => {
@@ -1001,12 +996,12 @@ footer span { color: var(--dim); }
     }
     requestAnimationFrame(frame);
   }
-
+ 
   window.addEventListener('resize', build);
   build(); frame();
 })();
-
-
+ 
+ 
 /* ─── TYPING ANIMATION ─── */
 (function () {
   const el    = document.getElementById('typed');
@@ -1016,7 +1011,7 @@ footer span { color: var(--dim); }
     'Up & coming. Already delivering.',
   ];
   let li = 0, ci = 0, del = false;
-
+ 
   function tick() {
     const cur = lines[li];
     if (!del) {
@@ -1030,20 +1025,20 @@ footer span { color: var(--dim); }
   }
   setTimeout(tick, 900);
 })();
-
-
+ 
+ 
 /* ─── NAV SCROLL + ACTIVE LINK ─── */
 const nav    = document.getElementById('nav');
 const nlinks = document.querySelectorAll('.nav-links a[href^="#"]');
 const prog   = document.getElementById('progress');
-
+ 
 window.addEventListener('scroll', () => {
   nav.classList.toggle('glass', window.scrollY > 36);
-
+ 
   // progress bar
   const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
   prog.style.width = pct + '%';
-
+ 
   // active section
   let cur = '';
   ['hero','projects','skills','contact'].forEach(id => {
@@ -1052,8 +1047,8 @@ window.addEventListener('scroll', () => {
   });
   nlinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, { passive: true });
-
-
+ 
+ 
 /* ─── SCROLL REVEAL ─── */
 const ro = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
@@ -1064,8 +1059,8 @@ const ro = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.07 });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-
+ 
+ 
 /* ─── COUNTER ANIMATION ─── */
 const co = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1082,12 +1077,12 @@ const co = new IntersectionObserver(entries => {
   });
 });
 document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
-
-
+ 
+ 
 /* ─── FILTER SYSTEM ─── */
 const pills  = document.querySelectorAll('.fpill');
 const cards  = document.querySelectorAll('.pcard');
-
+ 
 function applyFilter(f) {
   pills.forEach(p => p.classList.toggle('on', p.dataset.f === f));
   cards.forEach(c => {
@@ -1096,9 +1091,9 @@ function applyFilter(f) {
     if (match) { c.classList.add('lit'); setTimeout(() => c.classList.remove('lit'), 700); }
   });
 }
-
+ 
 pills.forEach(p => p.addEventListener('click', () => applyFilter(p.dataset.f)));
-
+ 
 // clicking a skill tag on a card triggers the filter
 document.querySelectorAll('.tag').forEach(tag => {
   tag.addEventListener('click', () => {
@@ -1107,25 +1102,25 @@ document.querySelectorAll('.tag').forEach(tag => {
     if (pill) applyFilter(t);
   });
 });
-
-
+ 
+ 
 /* ─── TOAST / CLIPBOARD ─── */
 function copyToClip(text, msg) {
   navigator.clipboard.writeText(text)
     .then(() => showToast('✓ ' + msg))
     .catch(() => showToast('Copy manually: ' + text));
 }
-
+ 
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2400);
 }
-
+ 
 // expose for onclick
 window.copyToClip = copyToClip;
-
-
+ 
+ 
 /* ─── SMOOTH SCROLL ─── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
