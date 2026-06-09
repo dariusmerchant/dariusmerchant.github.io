@@ -47,14 +47,12 @@ body{
 ::-webkit-scrollbar-track{background:var(--cream2)}
 ::-webkit-scrollbar-thumb{background:var(--orange);border-radius:0}
 
-/* ─── SCROLL PROGRESS ────────────────────────── */
 #prog{
   position:fixed;top:0;left:0;height:3px;width:0%;
   background:var(--orange);z-index:1000;
   transition:width .08s linear;
 }
 
-/* ─── NAV ────────────────────────────────────── */
 #nav{
   position:fixed;top:0;left:0;right:0;
   height:58px;z-index:200;
@@ -111,7 +109,6 @@ body{
   background:var(--ink);transition:all .3s;
 }
 
-/* ─── HERO ───────────────────────────────────── */
 #hero{
   min-height:100vh;
   display:grid;
@@ -129,7 +126,6 @@ body{
   overflow:hidden;
 }
 
-/* big diagonal stripe decoration */
 .hero-left::after{
   content:'';
   position:absolute;
@@ -216,7 +212,6 @@ body{
   position:relative;
 }
 
-/* big rotated background text */
 .hero-bg-text{
   position:absolute;
   bottom:-20px;right:-30px;
@@ -282,14 +277,12 @@ body{
 }
 @keyframes tcblink{0%,100%{opacity:1}50%{opacity:0}}
 
-/* ─── REVEAL ─────────────────────────────────── */
 .reveal{
   opacity:0;transform:translateY(30px);
   transition:opacity .7s ease,transform .7s ease;
 }
 .reveal.in{opacity:1;transform:none}
 
-/* ─── SECTION STRUCTURE ──────────────────────── */
 .section{padding:96px 7%}
 
 .section-header{
@@ -326,12 +319,10 @@ body{
   letter-spacing:-.02em;
 }
 
-/* ─── PROJECTS SECTION ───────────────────────── */
 #projects{background:var(--white)}
 
 .proj-list{display:flex;flex-direction:column;gap:0}
 
-/* each project row */
 .proj{
   display:grid;
   grid-template-columns:5px 1fr;
@@ -345,7 +336,6 @@ body{
 .proj:hover .proj-num{color:#fff}
 .proj:hover .proj-type{color:#fff;border-color:rgba(255,255,255,.4)}
 
-/* colored left sidebar */
 .proj-sidebar{
   background:var(--rule);
   transition:background .25s;
@@ -356,7 +346,6 @@ body{
   width:5px;
 }
 
-/* main content */
 .proj-main{
   padding:36px 36px 36px 28px;
 }
@@ -410,7 +399,7 @@ body{
 }
 .proj-desc strong{color:#0f172a;font-weight:600}
 
-.proj-pills{display:flex;flex-wrap:wrap;gap:6px}
+.proj-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .ppill{
   font-family:var(--mono);
   font-size:10px;
@@ -423,13 +412,13 @@ body{
 }
 .proj:hover .ppill{background:rgba(61,127,255,.1);color:var(--orange)}
 
-/* video */
 .proj-video-wrap{
   position:relative;
   width:100%;aspect-ratio:16/9;
   background:var(--cream2);
   overflow:hidden;
   border:1px solid var(--rule);
+  margin-bottom:20px;
 }
 .proj-video-wrap iframe{
   position:absolute;inset:0;width:100%;height:100%;border:none;
@@ -441,34 +430,44 @@ body{
   color:var(--dust);
   letter-spacing:.18em;
   text-transform:uppercase;
-  margin-bottom:14px;
+  margin-bottom:8px;
   display:flex;align-items:center;gap:8px;
 }
 .proj-features-label::after{
   content:'';flex:1;height:1px;background:var(--rule);
 }
 
+.feat-section{margin-bottom:14px}
+.feat-section-title{
+  font-family:var(--mono);
+  font-size:9px;
+  color:var(--orange);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  margin-top:10px;
+}
+
 .feat-rows{display:flex;flex-direction:column;gap:0}
 .feat-row{
   display:flex;align-items:flex-start;gap:12px;
-  padding:9px 0;
+  padding:7px 0;
   border-bottom:1px solid var(--rule);
-  font-size:13px;
+  font-size:12px;
   color:var(--mid);
   line-height:1.5;
 }
 .feat-row:last-child{border-bottom:none}
 .feat-icon{
   color:var(--orange);
-  font-size:16px;
-  line-height:1.1;
+  font-size:14px;
+  line-height:1.2;
   flex-shrink:0;
   margin-top:1px;
   font-family:var(--serif);
   font-weight:900;
 }
 
-/* ─── SKILLS ─────────────────────────────────── */
 #skills{background:var(--cream)}
 
 .skills-wrap{
@@ -500,7 +499,6 @@ body{
 }
 .skill-tile:hover::before{transform:scaleX(1)}
 
-/* remove right border on last of each row */
 .skill-tile:nth-child(4n){border-right:none}
 @media(max-width:900px){
   .skill-tile:nth-child(4n){border-right:1px solid var(--rule)}
@@ -535,7 +533,6 @@ body{
   line-height:1.65;
 }
 
-/* ─── CONTACT ────────────────────────────────── */
 #contact{
   background:var(--ink2);
   color:var(--white);
@@ -596,7 +593,6 @@ body{
 }
 .chandle:hover .ch-arrow{color:var(--orange);transform:translateX(4px)}
 
-/* terms */
 .terms-card{
   background:rgba(255,255,255,.04);
   border:1px solid rgba(255,255,255,.1);
@@ -634,7 +630,6 @@ body{
 }
 .term-txt strong{color:rgba(255,255,255,.78);font-weight:500}
 
-/* ─── FOOTER ─────────────────────────────────── */
 footer{
   background:var(--ink);
   padding:20px 7%;
@@ -655,7 +650,6 @@ footer{
   letter-spacing:.12em;
 }
 
-/* ─── TOAST ──────────────────────────────────── */
 #toast{
   position:fixed;bottom:24px;right:24px;
   background:var(--ink);
@@ -671,7 +665,6 @@ footer{
 }
 #toast.show{opacity:1;transform:none}
 
-/* ─── RESPONSIVE ─────────────────────────────── */
 @media(max-width:820px){
   #hero{grid-template-columns:1fr}
   .hero-right{display:none}
@@ -688,7 +681,6 @@ footer{
 
 <div id="prog"></div>
 
-<!-- ─── NAV ──────────────────────────────────── -->
 <nav id="nav">
   <a href="#hero" class="nav-brand">darius<span>merchant</span></a>
   <ul class="nav-links">
@@ -701,7 +693,6 @@ footer{
   </button>
 </nav>
 
-<!-- ─── HERO ──────────────────────────────────── -->
 <section id="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">
@@ -724,7 +715,7 @@ footer{
     <div class="hero-numbers">
       <div class="hnum reveal">
         <div class="hnum-val"><span id="cnt">0</span> <span class="small">games</span></div>
-        <div class="hnum-label">shipped & playable</div>
+        <div class="hnum-label">shipped &amp; playable</div>
       </div>
       <div class="hnum reveal">
         <div class="hnum-val">3 <span class="small">systems</span></div>
@@ -742,149 +733,385 @@ footer{
   </div>
 </section>
 
-<!-- ─── PROJECTS ──────────────────────────────── -->
 <section id="projects" class="section">
   <div class="section-header reveal">
     <div class="section-num">01</div>
     <div class="section-heading">
       <div class="section-kicker">shipped work</div>
-      <h2 class="section-title">Three games.<br>Built from scratch.</h2>
+      <h2 class="section-title">Ten systems.<br>Built from scratch.</h2>
     </div>
   </div>
 
   <div class="proj-list">
 
-    <!-- MOG SIMULATOR -->
     <div class="proj reveal">
       <div class="proj-sidebar"></div>
       <div class="proj-main">
         <div class="proj-head">
           <div class="proj-head-left">
             <span class="proj-num">01</span>
-            <h3 class="proj-name">Mog Simulator</h3>
+            <h3 class="proj-name">Data Saving System</h3>
           </div>
-          <span class="proj-type">Incremental Simulator</span>
+          <span class="proj-type">Backend / DataStore</span>
         </div>
         <div class="proj-body">
           <div>
-            <p class="proj-desc">
-              A full idle-incremental simulator engineered around a <strong>currency loop, prestige economy, and zone-gating system</strong>.
-              Players roam maps collecting Mog pickups, funnel earnings into a tiered upgrade shop, and hit Rebirth to bank permanent multipliers.
-              The economy was designed to scale — rarity-weighted pickups (Common → Legendary), dual prestige via PSL Ascend, and <strong>offline gains calculated on rejoin</strong> keep players coming back.
-              Everything saves automatically through a robust DataStore pipeline.
-            </p>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>DataStoreService proficiency</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Backend programming skills</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Persistent player data management</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Auto-save and data recovery concepts</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Client-server communication</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Production-ready game infrastructure</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
             <div class="proj-pills">
-              <span class="ppill">Weighted Rarity Spawns</span>
-              <span class="ppill">Economy Balancing</span>
-              <span class="ppill">Rebirth Multipliers</span>
-              <span class="ppill">PSL Prestige</span>
-              <span class="ppill">Auto-Collect Radius</span>
-              <span class="ppill">Offline Gains</span>
-              <span class="ppill">Zone Progression</span>
-              <span class="ppill">DataStore + Leaderstats</span>
+              <span class="ppill">Data serialization/deserialization</span>
+              <span class="ppill">Error handling and retries</span>
+              <span class="ppill">Session management</span>
+              <span class="ppill">Server authority</span>
+              <span class="ppill">Scalable data architecture</span>
             </div>
           </div>
           <div>
-            <div class="proj-video-wrap" style="margin-bottom:20px">
-              <iframe src="https://www.youtube.com/embed/4XDG4DuaI-M" title="Mog Simulator" allowfullscreen></iframe>
-            </div>
-            <div class="proj-features-label">key mechanics</div>
-            <div class="feat-rows">
-              <div class="feat-row"><span class="feat-icon">+</span><span>Proximity auto-collect — players passively earn within a radius that upgrades scale</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>6-tier shop with Multiplier, Radius, Speed, and zone unlock upgrades</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Rebirth layer + PSL Ascend — two independent prestige systems stacked</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Offline earnings time-delta calculated securely on rejoin</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>DataStore auto-saves on PlayerRemoving with pcall safety</span></div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/k26EigR5Vwc" title="Data Saving System" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- STEAL A JOB -->
     <div class="proj reveal">
       <div class="proj-sidebar"></div>
       <div class="proj-main">
         <div class="proj-head">
           <div class="proj-head-left">
             <span class="proj-num">02</span>
-            <h3 class="proj-name">Steal a Job</h3>
+            <h3 class="proj-name">Threat &amp; Aggro Management System</h3>
           </div>
-          <span class="proj-type">Competitive Multiplayer</span>
+          <span class="proj-type">AI / Combat</span>
         </div>
         <div class="proj-body">
           <div>
-            <p class="proj-desc">
-              A real-time competitive game where jobs are the contested resource. Players physically approach each other to trigger a steal — <strong>proximity detection runs server-side with magnitude checks</strong> so clients can never fake position.
-              Every job transfer is validated and recorded. A <strong>live leaderboard</strong> re-ranks players instantly on each ownership change, and per-player cooldowns block spam stealing.
-              Progression is DataStore-backed so rankings persist across sessions.
-            </p>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Advanced AI programming</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Combat system design</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Dynamic decision-making logic</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Multiplayer target management</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>RPG/MMO gameplay mechanics</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
             <div class="proj-pills">
-              <span class="ppill">Proximity Magnitude Checks</span>
-              <span class="ppill">Server-Authoritative Transfers</span>
-              <span class="ppill">Per-Player Cooldowns</span>
-              <span class="ppill">Live Leaderboard</span>
-              <span class="ppill">Anti-Exploit Validation</span>
-              <span class="ppill">DataStore Persistence</span>
-              <span class="ppill">Respawn Logic</span>
+              <span class="ppill">Threat calculations</span>
+              <span class="ppill">Priority-based target selection</span>
+              <span class="ppill">State management</span>
+              <span class="ppill">Event-driven architecture</span>
+              <span class="ppill">NPC behavioral logic</span>
             </div>
           </div>
           <div>
-            <div class="proj-video-wrap" style="margin-bottom:20px">
-              <iframe src="https://www.youtube.com/embed/wMLwxwk0ZkI" title="Steal a Job" allowfullscreen></iframe>
-            </div>
-            <div class="proj-features-label">key mechanics</div>
-            <div class="feat-rows">
-              <div class="feat-row"><span class="feat-icon">+</span><span>Server magnitude check on steal — client position never trusted</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Job transfer runs entirely on server via RemoteEvent validation</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Cooldown tracked per-player on server — can't be bypassed by client</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Leaderboard updates on every ownership change in real time</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Job re-assigned automatically on character respawn</span></div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/biTCs_WLAb0" title="Threat and Aggro Management System" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- DRAGON BOSS FIGHT -->
     <div class="proj reveal">
       <div class="proj-sidebar"></div>
       <div class="proj-main">
         <div class="proj-head">
           <div class="proj-head-left">
             <span class="proj-num">03</span>
-            <h3 class="proj-name">Dragon Boss Fight</h3>
+            <h3 class="proj-name">Modular NPC AI Framework</h3>
           </div>
-          <span class="proj-type">Boss AI / PvE</span>
+          <span class="proj-type">AI / Architecture</span>
         </div>
         <div class="proj-body">
           <div>
-            <p class="proj-desc">
-              A solo PvE fight against a 1000 HP dragon powered by a <strong>custom AI behavior loop</strong> — no PathfindingService, just a real aggro-and-pursue system built from scratch.
-              The dragon launches fireballs on a physics arc the player can dodge, and swings a sword using <strong>sphere overlap hit detection</strong>.
-              Players counter with a Q-key Air Blast (server-enforced 6s cooldown). All damage, hit registration, and ability gating are server-authoritative — clients only send input, never apply state.
-            </p>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Reusable system architecture</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Object-oriented programming principles</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>AI state machine implementation</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Scalable NPC development</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
             <div class="proj-pills">
-              <span class="ppill">Custom Aggro Loop</span>
-              <span class="ppill">Sphere Overlap Detection</span>
-              <span class="ppill">Physics Arc Projectile</span>
-              <span class="ppill">Server-Side Damage</span>
-              <span class="ppill">Ability Cooldown Gate</span>
-              <span class="ppill">Dual HP Bar UI</span>
-              <span class="ppill">RemoteEvent Architecture</span>
+              <span class="ppill">PathfindingService</span>
+              <span class="ppill">State machines</span>
+              <span class="ppill">Modular code organization</span>
+              <span class="ppill">AI behavior abstraction</span>
+              <span class="ppill">Performance optimization</span>
             </div>
           </div>
           <div>
-            <div class="proj-video-wrap" style="margin-bottom:20px">
-              <iframe src="https://www.youtube.com/embed/biTCs_WLAb0" title="Dragon Boss Fight" allowfullscreen></iframe>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/-yq7NZ6Z6Os" title="Modular NPC AI Framework" allowfullscreen></iframe>
             </div>
-            <div class="proj-features-label">key mechanics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">04</span>
+            <h3 class="proj-name">Scalable Rebirth Framework</h3>
+          </div>
+          <span class="proj-type">Simulator / Economy</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
             <div class="feat-rows">
-              <div class="feat-row"><span class="feat-icon">+</span><span>Aggro loop: dragon detects, locks, and pursues target continuously</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Fireball on a BodyVelocity arc — timing-based dodge window</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>WorldRoot:GetPartsInPart() sphere overlap for melee hit detection</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Air Blast ability cooldown enforced server-side — client can't fire twice</span></div>
-              <div class="feat-row"><span class="feat-icon">+</span><span>Tweened HP bars for both boss and player update in real time</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Incremental/simulator game development</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Economy balancing</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Progression system design</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Long-term player retention mechanics</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">Stat multipliers</span>
+              <span class="ppill">Formula-based progression</span>
+              <span class="ppill">Data persistence integration</span>
+              <span class="ppill">Reward systems</span>
+              <span class="ppill">Config-driven architecture</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/vQOI4nev4y8" title="Scalable Rebirth Framework" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">05</span>
+            <h3 class="proj-name">Character Movement System</h3>
+          </div>
+          <span class="proj-type">Movement / Controller</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Player controller development</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Responsive gameplay programming</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Advanced character mechanics</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Custom movement implementation</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">State management</span>
+              <span class="ppill">Input handling</span>
+              <span class="ppill">Stamina systems</span>
+              <span class="ppill">Sprint/crouch/slide mechanics</span>
+              <span class="ppill">Client-server synchronization</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/VuZMP6FJjbk" title="Character Movement System" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">06</span>
+            <h3 class="proj-name">Pet &amp; Companion System</h3>
+          </div>
+          <span class="proj-type">Simulator / Companions</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Simulator game development experience</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Entity management</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Companion AI implementation</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Player progression systems</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">Follower behavior</span>
+              <span class="ppill">Formation logic</span>
+              <span class="ppill">Stat modifiers</span>
+              <span class="ppill">Equip/unequip systems</span>
+              <span class="ppill">Replication handling</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/FOlEBbg533w" title="Pet and Companion System" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">07</span>
+            <h3 class="proj-name">Dynamic Quest Framework</h3>
+          </div>
+          <span class="proj-type">RPG / Quests</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>RPG system development</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Objective tracking</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Player progression design</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Modular content architecture</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">Quest state management</span>
+              <span class="ppill">Reward distribution</span>
+              <span class="ppill">Event tracking</span>
+              <span class="ppill">Data persistence</span>
+              <span class="ppill">NPC interaction systems</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/JEP3lLlbuRE" title="Dynamic Quest Framework" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">08</span>
+            <h3 class="proj-name">Multiplayer Round Manager</h3>
+          </div>
+          <span class="proj-type">Multiplayer / Rounds</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Multiplayer game architecture</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Match flow management</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>State-driven game design</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Competitive game development</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">Round state transitions</span>
+              <span class="ppill">Player synchronization</span>
+              <span class="ppill">Match lifecycle management</span>
+              <span class="ppill">Team handling</span>
+              <span class="ppill">Timer systems</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/XqCzcBioSF4" title="Multiplayer Round Manager" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">09</span>
+            <h3 class="proj-name">Vehicle Framework</h3>
+          </div>
+          <span class="proj-type">Physics / Vehicles</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Physics-based programming</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Vehicle system development</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Real-time synchronization</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Interactive gameplay mechanics</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">Vehicle controls</span>
+              <span class="ppill">Physics constraints</span>
+              <span class="ppill">Speed and movement calculations</span>
+              <span class="ppill">Client-server networking</span>
+              <span class="ppill">UI integration</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/ZGS2P2cQ3CE" title="Vehicle Framework" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj-sidebar"></div>
+      <div class="proj-main">
+        <div class="proj-head">
+          <div class="proj-head-left">
+            <span class="proj-num">10</span>
+            <h3 class="proj-name">Server-Authoritative Shop &amp; Inventory</h3>
+          </div>
+          <span class="proj-type">Economy / Security</span>
+        </div>
+        <div class="proj-body">
+          <div>
+            <div class="proj-features-label">what it proves</div>
+            <div class="feat-rows">
+              <div class="feat-row"><span class="feat-icon">+</span><span>Secure multiplayer programming</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Economy system development</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Anti-exploit mindset</span></div>
+              <div class="feat-row"><span class="feat-icon">+</span><span>Professional Roblox architecture</span></div>
+            </div>
+            <div class="feat-section-title" style="font-family:var(--mono);font-size:9px;color:var(--orange);letter-spacing:.16em;text-transform:uppercase;margin-top:14px;margin-bottom:6px;">technical skills demonstrated</div>
+            <div class="proj-pills">
+              <span class="ppill">RemoteEvent validation</span>
+              <span class="ppill">Inventory management</span>
+              <span class="ppill">Purchasing systems</span>
+              <span class="ppill">Equip/unequip logic</span>
+              <span class="ppill">Server-side authority</span>
+              <span class="ppill">UI-system integration</span>
+            </div>
+          </div>
+          <div>
+            <div class="proj-video-wrap">
+              <iframe src="https://www.youtube.com/embed/Vpu96aZUp1g" title="Server-Authoritative Shop and Inventory" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -894,7 +1121,6 @@ footer{
   </div>
 </section>
 
-<!-- ─── SKILLS ────────────────────────────────── -->
 <section id="skills" class="section">
   <div class="section-header reveal">
     <div class="section-num">02</div>
@@ -907,7 +1133,7 @@ footer{
   <div class="skills-wrap">
     <div class="skill-tile reveal">
       <span class="st-tag">AI</span>
-      <div class="st-name">Boss & NPC Behavior</div>
+      <div class="st-name">Boss &amp; NPC Behavior</div>
       <div class="st-desc">Custom aggro, pursuit, and attack-pattern loops. Behavior states that react to the player — not just a chase script.</div>
     </div>
     <div class="skill-tile reveal">
@@ -918,7 +1144,7 @@ footer{
     <div class="skill-tile reveal">
       <span class="st-tag">DB</span>
       <div class="st-name">DataStore Systems</div>
-      <div class="st-desc">pcall-wrapped saves, PlayerRemoving auto-save, currency & upgrade schema, and safe data-loss prevention.</div>
+      <div class="st-desc">pcall-wrapped saves, PlayerRemoving auto-save, currency &amp; upgrade schema, and safe data-loss prevention.</div>
     </div>
     <div class="skill-tile reveal">
       <span class="st-tag">ECO</span>
@@ -927,7 +1153,7 @@ footer{
     </div>
     <div class="skill-tile reveal">
       <span class="st-tag">CBT</span>
-      <div class="st-name">Combat & Hit Detection</div>
+      <div class="st-name">Combat &amp; Hit Detection</div>
       <div class="st-desc">Sphere overlap, raycasting, projectile physics, weapon tools, and server-side damage pipelines with cooldown gates.</div>
     </div>
     <div class="skill-tile reveal">
@@ -942,13 +1168,12 @@ footer{
     </div>
     <div class="skill-tile reveal">
       <span class="st-tag">PHY</span>
-      <div class="st-name">Physics & Animation</div>
+      <div class="st-name">Physics &amp; Animation</div>
       <div class="st-desc">LinearVelocity, BodyVelocity knockback, tween chains, constraint rigs, and smooth HUD animation sequences.</div>
     </div>
   </div>
 </section>
 
-<!-- ─── CONTACT ───────────────────────────────── -->
 <section id="contact" class="section">
   <div class="contact-inner">
     <div class="reveal">
@@ -984,7 +1209,7 @@ footer{
       <div class="terms-title">Before contacting me</div>
       <div class="term">
         <span class="term-n">1</span>
-        <span class="term-txt">My code <strong> is designed</strong>to scale and support future additions.</span>
+        <span class="term-txt">My code <strong>is designed</strong> to scale and support future additions.</span>
       </div>
       <div class="term">
         <span class="term-n">2</span>
@@ -1002,7 +1227,6 @@ footer{
   </div>
 </section>
 
-<!-- ─── FOOTER ────────────────────────────────── -->
 <footer>
   <span class="ft-brand">darius<span>merchant</span></span>
   <span class="ft-copy">© 2026 · roblox scripter · taking commissions</span>
@@ -1011,13 +1235,11 @@ footer{
 <div id="toast"></div>
 
 <script>
-/* NAV SCROLL */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
   const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
   document.getElementById('prog').style.width = pct + '%';
-  // active links
   let cur = '';
   ['hero','projects','skills','contact'].forEach(id => {
     const s = document.getElementById(id);
@@ -1028,8 +1250,6 @@ window.addEventListener('scroll', () => {
   );
 }, {passive:true});
 
-/* MOBILE NAV */
-const sidebar = document.getElementById('nav');
 document.getElementById('burger').addEventListener('click', () => {
   const links = document.querySelector('.nav-links');
   if(links.style.display === 'flex'){
@@ -1039,7 +1259,6 @@ document.getElementById('burger').addEventListener('click', () => {
   }
 });
 
-/* REVEAL */
 const ro = new IntersectionObserver(entries => {
   entries.forEach((e,i) => {
     if(e.isIntersecting){
@@ -1050,7 +1269,6 @@ const ro = new IntersectionObserver(entries => {
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-/* COUNTER */
 (function(){
   const el = document.getElementById('cnt');
   const co = new IntersectionObserver(entries=>{
@@ -1066,7 +1284,6 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   co.observe(el);
 })();
 
-/* TYPING */
 (function(){
   const el = document.getElementById('typed-out');
   const lines = [
@@ -1090,7 +1307,6 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   setTimeout(tick,1200);
 })();
 
-/* TOAST */
 function copyToClip(text){
   navigator.clipboard.writeText(text)
     .then(()=>showToast('Discord username copied — '+text))
@@ -1103,7 +1319,6 @@ function showToast(msg){
 }
 window.copyToClip=copyToClip;
 
-/* SMOOTH SCROLL */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const t=document.querySelector(a.getAttribute('href'));
