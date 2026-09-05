@@ -175,6 +175,76 @@ body{
   text-transform:uppercase;
 }
 
+.hero-featured-label{
+  margin-top:28px;
+  margin-bottom:7px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:var(--orange);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.hero-featured-game{
+  display:block;
+  margin-top:0;
+  font-family:var(--serif);
+  font-size:clamp(14px,2vw,24px);
+  font-weight:900;
+  line-height:1.05;
+  color:var(--white);
+  text-decoration:none;
+  letter-spacing:-.02em;
+  transition:color .25s,transform .25s;
+}
+.hero-featured-game span{
+  color:var(--orange);
+}
+.hero-featured-link{
+  display:inline-block;
+  margin-top:0;
+  margin-bottom:8px;
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  color:var(--orange);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  transition:color .2s,transform .2s;
+}
+.hero-featured-link:hover{
+  color:var(--orange2);
+  transform:translateX(5px);
+}
+
+.hero-featured-game:hover{
+  color:var(--orange2);
+  transform:translateX(5px);
+}
+.hero-featured-game::after{
+  content:none;
+}
+
+.hero-featured-video{
+  position:relative;
+  width:100%;
+  max-width:620px;
+  aspect-ratio:16/9;
+  margin-top:18px;
+  background:var(--bg2);
+  border:1px solid var(--border2);
+  border-radius:10px;
+  overflow:hidden;
+}
+.hero-featured-video iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
 .hero-cta-row{
   display:flex;gap:12px;flex-wrap:wrap;
   margin-top:44px;
@@ -704,6 +774,16 @@ footer{
       <span class="accent">merchant</span>
     </h1>
     <p class="hero-role">// Roblox Game Scripter</p>
+    <div class="hero-featured-label">My top live game</div>
+    <a class="hero-featured-link" href="https://www.roblox.com/games/84659646255935/Russian-Sleep-Experiment" target="_blank" rel="noopener">Play Russian Sleep Experiment on Roblox →</a>
+    <div class="hero-featured-game"><span>Russian Sleep Experiment</span></div>
+    <div class="hero-featured-video">
+      <iframe
+        src="https://www.youtube.com/embed/QNMSU2_ObUI"
+        title="Russian Sleep Experiment Gameplay"
+        allowfullscreen>
+      </iframe>
+    </div>
     <div class="hero-cta-row">
       <a href="#projects" class="btn-fill">See my work</a>
       <a href="#contact"  class="btn-outline">Get a quote</a>
